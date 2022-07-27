@@ -289,3 +289,257 @@
 // }
 
 
+
+//Задача 46. Задайте двумерный массив размером m×n, заполненный случайными целыми числами.
+
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i, j] = new Random().Next(minValue, maxValue + 1);
+// }
+// }
+// return result;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+// for (int row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (int column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row,column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+
+
+//Задача 48: Задайте двумерный массив размера m на n, каждый элемент в массиве находится по формуле: Aₘₙ = m+n. Выведите полученный массив на экран.
+
+// Console.Clear();
+
+// int[,] GetArray(int m, int n)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i, j] = i+j;
+// }
+// }
+// return result;
+// }
+
+// void PrintArray(int[,] inArray)
+// {
+// for (int row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (int column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row,column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// int columns=Convert.ToInt32(Console.ReadLine());
+
+// int[,] array = GetArray(rows, columns);
+// PrintArray(array);
+
+
+//Задача 51: Задайте двумерный массив. Найдите сумму элементов, находящихся на главной диагонали (с индексами (0,0); (1;1) и т.д.
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue) // создает двумерный массив
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i, j] = new Random().Next(minValue, maxValue + 1);
+// }
+// }
+// return result;
+
+// }
+// int GetSum (int [,] array)
+// { int sum=0;
+
+// for (int i = 0; i < array.GetLength(0); i++)
+// {
+// for (int j = 0; j < array.GetLength(1); j++)
+// {
+// if(i==j) sum=sum+array[i,j];
+// }
+// }
+// return sum;
+// }
+// void PrintArray(int[,] inArray) // вывводит двумерный массив
+// {
+// for (int row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (int column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row,column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// int rows=Convert.ToInt32(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+
+
+
+//Задача 47: Задайте двумерный массив размером m×n, заполненный случайными вещественными числами.
+
+// Console.Clear();
+
+// int[,] GetArray(int m, int n, int minValue, int maxValue)
+// {
+// int[,] result = new int[m, n];
+// for (int i = 0; i < m; i++)
+// {
+// for (int j = 0; j < n; j++)
+// {
+// result[i, j] = new Random().NextDouble()*(maxValue-minValue)+minValue;
+// }
+// }
+// return result;
+// }
+
+// void PrintArray(double[,] inArray)
+// {
+// for (double row = 0; row < inArray.GetLength(0); row++)
+// {
+// for (double column = 0; column < inArray.GetLength(1); column++)
+// {
+// Console.Write($"{inArray[row, column]} ");
+// }
+// Console.WriteLine();
+// }
+// }
+
+// Console.Write("Введите количество строк массива: ");
+// double rows=Convert.ToDouble(Console.ReadLine());
+
+// Console.Write("Введите количество столбцов массива: ");
+// double columns=Convert.ToDouble(Console.ReadLine());
+
+// double[,] array = GetArray(rows, columns, 0, 10);
+// PrintArray(array);
+// Console.WriteLine("введите количество строк");
+// int linesVol  = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("введите количество столбцов");
+// int columnsVol = Convert.ToInt32(Console.ReadLine());
+// double[,] numbers = new double[linesVol, columnsVol];
+// FillArrayRandomNumbers(numbers);
+// PrintArray(numbers);
+
+// void FillArrayRandomNumbers(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             array[i, j] = Convert.ToDouble(new Random().Next(-100, 100)) / 10;
+//         }
+//     }
+// }
+
+// void PrintArray(double[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i, j] + " ");
+//         }
+//         Console.Write("]");
+//         Console.WriteLine("");
+//     }
+// }
+
+//Задача 50: Напишите программу, которая на вход принимает позиции элемента в двумерном массиве, и возвращает значение этого элемента или же указание, что такого элемента нет.
+
+// Console.WriteLine("введите номер строки");
+// int n = Convert.ToInt32(Console.ReadLine());
+// Console.WriteLine("введите номер столбца");
+// int m = Convert.ToInt32(Console.ReadLine());
+// int [,] numbers = new int [10,10];
+// FillArrayRandomNumbers(numbers);
+
+// if (n > numbers.GetLength(0) || m > numbers.GetLength(1))
+// {
+//     Console.WriteLine("такого элемента нет");
+// }
+// else
+// {
+//     Console.WriteLine($"значение элемента {n} строки и {m} столбца равно {numbers[n-1,m-1]}");
+// }
+
+// PrintArray(numbers);
+
+// void FillArrayRandomNumbers(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//         {        
+//             for (int j = 0; j < array.GetLength(1); j++)
+//             {
+//                 array [i,j] = new Random().Next(10, 100);
+//             }   
+//         }
+// }
+
+// void PrintArray(int[,] array)
+// {
+//     for (int i = 0; i < array.GetLength(0); i++)
+//     {
+//         Console.Write("[ ");
+//         for (int j = 0; j < array.GetLength(1); j++)
+//         {
+//             Console.Write(array[i,j] + " ");
+//         }   
+//         Console.Write("]");
+//         Console.WriteLine(""); 
+//     }
+// }
+
+
+
+
+//Задача 52: Задайте двумерный массив из целых чисел. Найдите среднее арифметическое элементов в каждом столбце.
+
+
+//Задача 53: Задайте двумерный массив. Напишите программу, которая поменяет местами первую и последнюю строку массива.
+
+
+//Задача 61: Вывести первые N строк треугольника Паскаля. Сделать вывод в виде равнобедренного треугольника
+
+
+
+
